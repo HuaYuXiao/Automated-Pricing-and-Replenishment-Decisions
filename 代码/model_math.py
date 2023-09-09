@@ -113,6 +113,15 @@ def train_model():
             '食用菌': [11, 11.5, 12, 12.5, 13]
         }
 
+        # price_ranges = {
+        #     '水生根茎类': [10.5],
+        #     '花叶类': [6],
+        #     '花菜类': [9.5],
+        #     '茄类': [8.5],
+        #     '辣椒类': [10],
+        #     '食用菌': [12]
+        # }
+
         # 初始化最优的price和profit_whole
         best_price = {}
         max_profit_whole = -float('inf')
@@ -132,10 +141,11 @@ def train_model():
 
             # 检查是否找到了更好的价格组合
             if profit_whole > max_profit_whole:
-                max_profit_whole = profit_whole
+                max_profit_whole = round(profit_whole, 3)
                 best_price = price_dict.copy()
 
         def get_replenish(x):
+            x = np.array([[x]])
             os.chdir(xlsx_path)
             df_index = pd.read_excel(csv1_name, header=0)
             df_index.set_index('分类名称', inplace=True)
@@ -157,9 +167,7 @@ def train_model():
             replenish = get_replenish(price)
 
             # 将补货量存储在结果字典中
-            replenishment_dict[column_name] = {
-                column_name: replenish
-            }
+            replenishment_dict[column_name] = round(float(replenish), 3)
 
         # 输出最佳价格组合和对应的总利润
         print("最佳价格组合：", best_price)
