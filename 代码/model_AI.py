@@ -32,6 +32,19 @@ def plot_model(x_test, y_test, y_pred, model_type):
     plt.title(f'{model_type}性能曲线 RMSE = {rmse}')
 
 
+def pkl2mat(sheet_name):
+    os.chdir(r'C:\iCloudDrive\项目\高教杯\模型\GPR\v2')
+    # 请替换为实际的文件名
+    pkl_file = f'model_GPR_{sheet_name}_v2.pkl'
+
+    # 使用pickle加载高斯模型
+    with open(pkl_file, 'rb') as file:
+        a_model = pickle.load(file)
+
+    # 将高斯回归模型保存为MAT文件
+    sio.savemat(f'model_GPR_{sheet_name}_v2.mat', {'a_model': a_model})
+
+
 def train_NN(sheet_name):
     x_train, x_test, y_train, y_test = pre_data(sheet_name)
 

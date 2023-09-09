@@ -16,6 +16,9 @@ import joblib
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error
 from joblib import dump
+import scipy.io as sio
+import pickle
+from datetime import datetime, timedelta
 
 
 xlsx_path = r'C:\iCloudDrive\项目\高教杯\数据'
@@ -31,3 +34,7 @@ csv5_name = 'df5.xlsx'
 
 fig_path = r'C:\iCloudDrive\项目\高教杯\图片'
 model_path = r'C:\iCloudDrive\项目\高教杯\模型'
+
+
+warnings.filterwarnings('ignore')
+mpl.rcParams['font.family'] = 'SimHei'
