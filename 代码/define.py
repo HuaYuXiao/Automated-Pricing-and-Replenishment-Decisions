@@ -19,6 +19,8 @@ from joblib import dump
 import scipy.io as sio
 import pickle
 from datetime import datetime, timedelta
+import itertools
+import tqdm
 
 
 xlsx_path = r'C:\iCloudDrive\项目\高教杯\数据'
