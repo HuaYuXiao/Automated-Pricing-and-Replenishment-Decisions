@@ -1,2 +1,5 @@
-# Automated-pricing-and-replenishment-decisions-for-vegetable-products
-2023年高教社杯全国大学生数学建模竞赛C题：蔬菜类商品的自动定价与补货决策
+# 蔬菜类商品的自动定价与补货决策
+
+2023年高教社杯全国大学生数学建模竞赛C题
+
+团队成员：华羽霄、肖涵、谢玉博
