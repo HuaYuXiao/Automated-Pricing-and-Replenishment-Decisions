@@ -7,4 +7,4 @@ from get_index import *
 
 
 if __name__ == '__main__':
-    get_month()
+    each_quarter()
