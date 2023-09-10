@@ -32,7 +32,11 @@ csv2_name = 'df2.xlsx'
 xlsx3_name= '附件3.xlsx'
 csv3_name = 'df3.xlsx'
 csv4_name = 'df4.xlsx'
-csv5_name = 'df5.xlsx'
+
+csv_quarter = 'index_quarter.xlsx'
+csv_month = 'index_month.xlsx'
+csv_week = 'index_week.xlsx'
+csv_day = 'index_day.xlsx'
 
 fig_path = r'C:\iCloudDrive\项目\高教杯\图片'
 model_path = r'C:\iCloudDrive\项目\高教杯\模型'
